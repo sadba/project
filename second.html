@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Getting Started with JavaScript</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body, .jumbotron { padding: 30px; }
+  </style>
+</head>
+<body>
+
+  <div class="jumbotron text-center">
+    <button class="btn btn-danger" onclick="goCoocoo()">Go button</button>
+  </div>
+
+
+  
+
+  <div class="jumbotron text-center">
+    <div class="btn btn-primary coffee-btn">Yeah coffee</div>
+  </div>
+
+  <!-- start javascript -->
+  <script>
+
+    function goCoocoo(){
+      document.body.style.backgroundColor = '#C00C00';
+    }
+
+    const coffeeButton = document.querySelector('.coffee-btn');
+    coffeeButton.onclick = function(){
+      document.body.style.background = '#C0FFEE';
+    }
+
+    coffeeButton.onclick = goCoocoo;
+
+    const lalaButton = document.querySelector('.coffee-btn');
+
+    function notListening(){
+      document.body.style.backgroundColor = "#1A1A1A";
+    }
+      lalaButton.addEventListener('click', notListening);
+
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => button.addEventListener('mouseleave', notListening));
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<script type="text/javascript">
+
+
+function introduce(name, interest) {
+    console.log('Hi! I\'m '+ name +' and I like '+ interest +'.');
+    console.log('The value of this is '+ this +'.')
+}
+
+introduce('Hammad', 'Coding'); // the way you usually call it
+introduce.call(window, 'Batman', 'to save Gotham'); // pass the arguments one by one after the contextt
+introduce.apply('Hi', ['Bruce Wayne', 'businesses']); // pass the arguments in an array after the context
+
+
+</script>
